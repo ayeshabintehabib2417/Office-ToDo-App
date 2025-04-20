@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import './App.css';
-import { DeleteFromList } from './ProjectList'; // Import only DeleteFromList
+import { DeleteFromList } from './ProjectList'; 
 
 export default function App() {
   const initialProjects = [
@@ -14,7 +14,7 @@ export default function App() {
 
   // Function to delete a project
   function deleteProject(id) {
-    setProjects((projects) => projects.filter((project) => project.id !== id)); // Filter out the project to be deleted
+    setProjects((projects) => projects.filter((project) => project.id !== id)); 
   }
 
   // Function to add a new task
@@ -24,7 +24,7 @@ export default function App() {
         id: projects.length + 1, // Assign a new id based on the current projects length
         content: newTask
       };
-      setProjects([...projects, newProject]); // Add the new project to the list
+      setProjects([...projects, newProject]); 
       setNewTask(''); // Reset the input field
     }
   }
@@ -39,7 +39,7 @@ export default function App() {
           type="text"
           placeholder="Add a new task"
           value={newTask}
-          onChange={(e) => setNewTask(e.target.value)} // Update state as user types
+          onChange={(e) => setNewTask(e.target.value)} 
         />
         <button onClick={addTask}>Add+</button> {/* Add button to trigger addTask */}
       </div>
